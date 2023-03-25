@@ -9,7 +9,7 @@ namespace WindowsFormDBConnect.DB
 {
     internal class Database
     {
-        static string myConnectionString = "server=localhost;uid=root;pwd=;database=it";
+        static string myConnectionString = "server=localhost;uid=root;pwd=;database=it;charset=utf8";
         public static MySqlConnection GetConnection()
         {
             MySqlConnection db = new MySqlConnection(myConnectionString);
