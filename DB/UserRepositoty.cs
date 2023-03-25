@@ -53,5 +53,18 @@ namespace WindowsFormDBConnect.DB
                 command1.ExecuteNonQuery();
             }
         }
+
+        public static void DeleteNote(int id)
+        {
+            MySqlConnection db = Database.GetConnection();
+            db.Open();
+            using (db)
+            {
+                string query = "DELETE FROM `notes` WHERE id = @id;";
+                MySqlCommand command = new MySqlCommand(query, db);
+                command.Parameters.AddWithValue("@id", id);
+                command.ExecuteNonQuery();   
+            }
+        }
     }
 }

@@ -31,12 +31,15 @@
             this.addNoteButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.notesInfo = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.deleteNoteButton = new System.Windows.Forms.Button();
+            this.idForDelete = new System.Windows.Forms.TextBox();
             this.note = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // addNoteButton
             // 
-            this.addNoteButton.Location = new System.Drawing.Point(201, 382);
+            this.addNoteButton.Location = new System.Drawing.Point(201, 379);
             this.addNoteButton.Name = "addNoteButton";
             this.addNoteButton.Size = new System.Drawing.Size(121, 23);
             this.addNoteButton.TabIndex = 0;
@@ -62,6 +65,32 @@
             this.notesInfo.TabIndex = 5;
             this.notesInfo.Text = "";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(460, 387);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 15);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Изтрий по ID:";
+            // 
+            // deleteNoteButton
+            // 
+            this.deleteNoteButton.Location = new System.Drawing.Point(653, 383);
+            this.deleteNoteButton.Name = "deleteNoteButton";
+            this.deleteNoteButton.Size = new System.Drawing.Size(110, 23);
+            this.deleteNoteButton.TabIndex = 8;
+            this.deleteNoteButton.Text = "Изтрий бележка";
+            this.deleteNoteButton.UseVisualStyleBackColor = true;
+            this.deleteNoteButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // idForDelete
+            // 
+            this.idForDelete.Location = new System.Drawing.Point(547, 384);
+            this.idForDelete.Name = "idForDelete";
+            this.idForDelete.Size = new System.Drawing.Size(100, 23);
+            this.idForDelete.TabIndex = 9;
+            // 
             // note
             // 
             this.note.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -77,6 +106,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.note);
+            this.Controls.Add(this.idForDelete);
+            this.Controls.Add(this.deleteNoteButton);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.notesInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.addNoteButton);
@@ -92,6 +124,9 @@
         private Button addNoteButton;
         private Label label1;
         private RichTextBox notesInfo;
+        private Label label4;
+        private Button deleteNoteButton;
+        private TextBox idForDelete;
         private RichTextBox note;
     }
 }

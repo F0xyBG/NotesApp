@@ -21,5 +21,14 @@ namespace WindowsFormDBConnect
             notesInfo.Text = NotesRepository.ShowNotes();
             note.Text = "";
         }
+
+        //Функция за бутона за изтриване на бележка
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int idForDel = int.Parse(idForDelete.Text);
+            NotesRepository.DeleteNote(idForDel);
+            notesInfo.Text = NotesRepository.ShowNotes();
+            idForDelete.Text = "";
+        }
     }
 }
