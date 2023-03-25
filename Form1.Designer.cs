@@ -71,7 +71,7 @@
             this.notesInfo.ImeMode = System.Windows.Forms.ImeMode.On;
             this.notesInfo.Location = new System.Drawing.Point(328, 12);
             this.notesInfo.Name = "notesInfo";
-            this.notesInfo.Size = new System.Drawing.Size(423, 353);
+            this.notesInfo.Size = new System.Drawing.Size(423, 369);
             this.notesInfo.TabIndex = 5;
             this.notesInfo.Text = "";
             // 

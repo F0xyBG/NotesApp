@@ -6,6 +6,7 @@ namespace WindowsFormDBConnect
 {
     public partial class Form1 : Form
     {
+        //Инициализираме приложението и изпращаме заявка за бележки, които да покажем още от началото на приложението
         public Form1()
         {
             InitializeComponent();
