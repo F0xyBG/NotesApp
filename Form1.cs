@@ -30,5 +30,13 @@ namespace WindowsFormDBConnect
             notesInfo.Text = NotesRepository.ShowNotes();
             idForDelete.Text = "";
         }
+
+        //Функция за бутона за търсене на бележка
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string stringForSearch = searchStringBox.Text;
+            notesInfo.Text = NotesRepository.SearchString(stringForSearch);
+        }
+
     }
 }

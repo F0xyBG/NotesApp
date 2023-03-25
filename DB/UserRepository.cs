@@ -66,5 +66,36 @@ namespace WindowsFormDBConnect.DB
                 command.ExecuteNonQuery();   
             }
         }
+
+
+
+        public static string SearchString(string searchString)
+        {
+            string result = "";
+            MySqlConnection db = Database.GetConnection();
+            db.Open();
+            using (db)
+            {
+                //Заявка за търсене на текст в бележките
+                string selectQuery = "SELECT * FROM `notes` WHERE `noteText` LIKE @searchString";
+                MySqlCommand command = new MySqlCommand(selectQuery, db);
+                command.Parameters.AddWithValue("@searchString", "%" + searchString + "%");
+                MySqlDataReader reader = command.ExecuteReader();
+
+                using (reader)
+                {
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string note = reader.GetString(1);
+                        result += $"ID: {id} | Note: {note} ";
+                        result += "\n";
+                        result += "================================================";
+                        result += "\n";
+                    }
+                }
+            }
+            return result;
+        }
     }
 }

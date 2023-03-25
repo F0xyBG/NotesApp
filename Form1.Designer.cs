@@ -34,12 +34,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.deleteNoteButton = new System.Windows.Forms.Button();
             this.idForDelete = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.searchStringBox = new System.Windows.Forms.TextBox();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.label2 = new System.Windows.Forms.Label();
             this.note = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // addNoteButton
             // 
-            this.addNoteButton.Location = new System.Drawing.Point(201, 379);
+            this.addNoteButton.Location = new System.Drawing.Point(201, 368);
             this.addNoteButton.Name = "addNoteButton";
             this.addNoteButton.Size = new System.Drawing.Size(121, 23);
             this.addNoteButton.TabIndex = 0;
@@ -91,12 +95,45 @@
             this.idForDelete.Size = new System.Drawing.Size(100, 23);
             this.idForDelete.TabIndex = 9;
             // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(247, 422);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.TabIndex = 12;
+            this.searchButton.Text = "Търси";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // searchStringBox
+            // 
+            this.searchStringBox.Location = new System.Drawing.Point(86, 422);
+            this.searchStringBox.Name = "searchStringBox";
+            this.searchStringBox.Size = new System.Drawing.Size(155, 23);
+            this.searchStringBox.TabIndex = 13;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(4, 397);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(318, 12);
+            this.progressBar2.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 426);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 15);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Съдържа:";
+            // 
             // note
             // 
             this.note.ImeMode = System.Windows.Forms.ImeMode.On;
             this.note.Location = new System.Drawing.Point(72, 12);
             this.note.Name = "note";
-            this.note.Size = new System.Drawing.Size(250, 353);
+            this.note.Size = new System.Drawing.Size(250, 350);
             this.note.TabIndex = 20;
             this.note.Text = "";
             // 
@@ -106,6 +143,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.note);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.searchStringBox);
+            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.idForDelete);
             this.Controls.Add(this.deleteNoteButton);
             this.Controls.Add(this.label4);
@@ -127,6 +168,10 @@
         private Label label4;
         private Button deleteNoteButton;
         private TextBox idForDelete;
+        private Button searchButton;
+        private TextBox searchStringBox;
+        private ProgressBar progressBar2;
+        private Label label2;
         private RichTextBox note;
     }
 }
