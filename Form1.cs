@@ -38,5 +38,15 @@ namespace WindowsFormDBConnect
             notesInfo.Text = NotesRepository.SearchString(stringForSearch);
         }
 
+        //Функция за бутона за обновяване на бележка
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int idForUpdate = int.Parse(updateBoxID.Text);
+            string textForUpdate = updateBoxText.Text;
+            NotesRepository.UpdateNote(idForUpdate, textForUpdate);
+            notesInfo.Text = NotesRepository.ShowNotes();
+            updateBoxID.Text = "";
+            updateBoxText.Text = "";
+        }
     }
 }

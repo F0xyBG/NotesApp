@@ -97,5 +97,18 @@ namespace WindowsFormDBConnect.DB
             }
             return result;
         }
+        public static void UpdateNote(int id, string text)
+        {
+            MySqlConnection db = Database.GetConnection();
+            db.Open();
+            using (db)
+            {
+                string query = "UPDATE `notes` SET `noteText` = @noteText WHERE `id` = @id;";
+                MySqlCommand command = new MySqlCommand(query, db);
+                command.Parameters.AddWithValue("@noteText", text);
+                command.Parameters.AddWithValue("@id", id);
+                command.ExecuteNonQuery();   
+            }
+        }
     }
 }
