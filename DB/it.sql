@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Време на генериране: 25 март 2023 в 16:33
+-- Време на генериране: 26 март 2023 в 00:09
 -- Версия на сървъра: 10.4.27-MariaDB
 -- Версия на PHP: 8.1.12
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `notes` (
   `id` int(255) NOT NULL,
   `noteText` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Indexes for dumped tables
